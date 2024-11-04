@@ -13,7 +13,7 @@
             rewardsAllowed: true
         };
     };
-    eval(${await n.text()})
+    eval(\`${await n.text()}\`)
     })()`
     document.getElementById("blockLite").href = pokiBlockLiteSrc
     document.getElementById("blockLite").classList.remove("disabled")
