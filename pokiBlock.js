@@ -1,5 +1,7 @@
 (async () => {
     const n = await fetch("https://raw.githubusercontent.com/amaterasusan/notification/refs/heads/master/notification.js")
+    const minify = await fetch(`https://www.toptal.com/developers/javascript-minifier/api/raw?input=${await n.text()}`, {method: "POST"})
+    console.log(await minify.text())
     const ncss = await fetch("https://raw.githubusercontent.com/amaterasusan/notification/refs/heads/master/notification.css")
     const pokiBlockLiteSrc = `javascript:(async () => {
     PokiSDK.commercialBreak = async function() {
