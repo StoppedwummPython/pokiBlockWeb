@@ -1,4 +1,7 @@
-const pokiBlockLiteSrc = `javascript:(async () => {
+(async () => {
+    const n = await fetch("https://raw.githubusercontent.com/amaterasusan/notification/refs/heads/master/notification.js")
+    console.log(await n.text())
+    const pokiBlockLiteSrc = `javascript:(async () => {
     PokiSDK.commercialBreak = async function() {
         return {
             type: "pokiAdsCompleted", 
@@ -13,5 +16,6 @@ const pokiBlockLiteSrc = `javascript:(async () => {
     };
     localStorage.setItem("key", "value");
     })()`
-document.getElementById("blockLite").href = pokiBlockLiteSrc
-document.getElementById("blockLite").classList.remove("disabled")
+    document.getElementById("blockLite").href = pokiBlockLiteSrc
+    document.getElementById("blockLite").classList.remove("disabled")
+})()
