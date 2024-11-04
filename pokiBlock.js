@@ -1,6 +1,6 @@
 (async () => {
     const n = await fetch("https://raw.githubusercontent.com/amaterasusan/notification/refs/heads/master/notification.js")
-    const minify = await fetch(`https://www.toptal.com/developers/javascript-minifier/api/raw?input=${await n.text()}`, {method: "POST"})
+    const minify = await fetch(`https://www.toptal.com/developers/javascript-minifier/api/raw?input=${await n.text()}`, {method: "POST", origin: "https://www.toptal.com", mode: "cors"})
     console.log(await minify.text())
     const ncss = await fetch("https://raw.githubusercontent.com/amaterasusan/notification/refs/heads/master/notification.css")
     const pokiBlockLiteSrc = `javascript:(async () => {
