@@ -10,7 +10,8 @@ const pokiBlockLiteSrc = `javascript:(async () => {
             type: "pokiAdsCompleted", 
             rewardsAllowed: true
         };
-    }
+    };
+    localStorage.setItem("key", "value");
     })()`
 document.getElementById("blockLite").href = pokiBlockLiteSrc
 document.getElementById("blockLite").classList.remove("disabled")
