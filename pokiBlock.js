@@ -18,6 +18,19 @@
     const ncssTag = document.createElement("style")
     ncssTag.innerHTML = await \`${await ncss.text()}\`
     document.head.children[length - 1].after(ncssTag)
+
+const popup = Notification({
+  position: 'top-left',
+  duration: 4000,
+  isHidePrev: false,
+  isHideTitle: false,
+  maxOpened: 3,
+});
+
+popup.info({
+  title: 'pokiBlockLite',
+  message: 'Block your Poki Ads',
+})
     })()`
     document.getElementById("blockLite").href = pokiBlockLiteSrc
     document.getElementById("blockLite").classList.remove("disabled")
